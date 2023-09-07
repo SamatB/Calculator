@@ -25,9 +25,11 @@ public class Main {
         String num1 = array[0];
         String symbol = array[1];
         String num2 = array[2];
+
+
         try {
             if (array.length >= 4)
-                throw new IllegalArgumentException("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *");
+                throw new IllegalArgumentException("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
             if (RomeNumbers.adds(num1) && RomeNumbers.adds(num2)) {
                 RomeNumbersCalc.romeCalculation(num1, num2, symbol);
             } else {

@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 class RomeNumbers {
+    static List<String> romes = new ArrayList<>();
+
     static boolean adds(String numbers) {
-        List<String> romes = new ArrayList<>();
         romes.add("O");
         romes.add("I");
         romes.add("II");
@@ -21,6 +22,10 @@ class RomeNumbers {
             if (numbers.equals(rome)) return true;
         }
         return false;
+    }
+
+    static boolean isRoman(String str) {
+        return romes.contains(str);
     }
 
     static String romeNums(int arabNums) {
